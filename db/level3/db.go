@@ -4,19 +4,10 @@
 // All read/write operations should take a timestamp parameter to determine expiration.
 
 // Interface for Level 3
-package db
+package level3
+
 
 type InMemoryDBLevel3 interface {
-	// Level 1
-	Set(key string, field string, value string)
-	Get(key string, field string) (string, bool)
-	Delete(key string, field string) bool
-
-	// Level 2
-	Scan(key string) []string
-	ScanByPrefix(key string, prefix string) []string
-
-	// Level 3
 	SetWithTimestamp(key string, field string, value string, timestamp int)
 	SetWithTTL(key string, field string, value string, timestamp int, ttl int)
 	GetWithTimestamp(key string, field string, timestamp int) (string, bool)
