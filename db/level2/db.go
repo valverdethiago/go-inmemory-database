@@ -3,7 +3,7 @@
 // Specifically, you must be able to retrieve all fields for a key and filter fields by prefix.
 
 // Interface for Level 2
-package db
+package level2
 
 type InMemoryDBLevel2 interface {
 	// Level 1
